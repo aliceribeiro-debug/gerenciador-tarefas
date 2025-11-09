@@ -32,11 +32,11 @@ Dê duplo clique no arquivo index.html
 ### 📘 Diagrama de Casos de Uso
 Representa as interações entre o usuário e o sistema.
 
-![Diagrama de Casos de Uso](docs/Diagrama de caso de uso.png)
+![Diagrama de Casos de Uso](./docs/diagrama-casos-de-uso.png)
 
 ---
 
 ### 📙 Diagrama de Classes
 Mostra a estrutura lógica do sistema.
 
-![Diagrama de Classes](docs/Diagrama de classes UML.png)
+![Diagrama de Classes](./docs/diagrama-classes.png)

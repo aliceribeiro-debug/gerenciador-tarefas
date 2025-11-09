@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gerenciador de Tarefas ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Gerenciador de Tarefas ✨</h1>
+    </header>
+
+    <section class="card">
+      <form id="taskForm" autocomplete="off">
+        <label>Título
+          <input id="title" type="text" placeholder="Ex: Estudar para prova" required />
+        </label>
+
+        <label>Descrição
+          <textarea id="description" placeholder="Detalhes (opcional)"></textarea>
+        </label>
+
+        <div class="row">
+          <label>Prioridade
+            <select id="priority">
+              <option>Alta</option>
+              <option selected>Média</option>
+              <option>Baixa</option>
+            </select>
+          </label>
+
+          <label class="checkbox">
+            <input id="completed" type="checkbox" /> Concluída
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Adicionar</button>
+          <button type="button" id="refreshBtn" class="btn">Atualizar lista</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" id="listCard">
+      <h2>Minhas tarefas</h2>
+      <div id="taskList" class="task-list"></div>
+      <p id="emptyMsg" class="muted">Carregando tarefas...</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+  <!-- Modal de edição de tarefa -->
+  <div id="editModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Editar tarefa ✏️</h3>
+      <form id="editForm">
+        <label>Título
+          <input type="text" id="editTitle" required>
+        </label>
+        <label>Descrição
+          <textarea id="editDescription"></textarea>
+        </label>
+        <label>Prioridade
+          <select id="editPriority">
+            <option>Alta</option>
+            <option>Média</option>
+            <option>Baixa</option>
+          </select>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="editCompleted"> Concluída
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn primary">Salvar</button>
+          <button type="button" id="cancelEdit" class="btn">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+</html>
